@@ -41,17 +41,17 @@ type SWUVersion struct {
 }
 
 type SWUEmail struct {
-	ID          string            `json:"email_id,omitempty"`
-	Recipient   *SWURecipient     `json:"recipient,omitempty"`
-	CC          []*SWURecipient   `json:"cc,omitempty"`
-	BCC         []*SWURecipient   `json:"bcc,omitempty"`
-	Sender      *SWUSender        `json:"sender,omitempty"`
-	EmailData   map[string]string `json:"email_data,omitempty"`
-	Tags        []string          `json:"tags,omitempty"`
-	Inline      *SWUAttachment    `json:"inline,omitempty"`
-	Files       []*SWUAttachment  `json:"files,omitempty"`
-	ESPAccount  string            `json:"esp_account,omitempty"`
-	VersionName string            `json:"version_name,omitempty"`
+	ID          string                 `json:"email_id,omitempty"`
+	Recipient   *SWURecipient          `json:"recipient,omitempty"`
+	CC          []*SWURecipient        `json:"cc,omitempty"`
+	BCC         []*SWURecipient        `json:"bcc,omitempty"`
+	Sender      *SWUSender             `json:"sender,omitempty"`
+	EmailData   map[string]interface{} `json:"email_data,omitempty"`
+	Tags        []string               `json:"tags,omitempty"`
+	Inline      *SWUAttachment         `json:"inline,omitempty"`
+	Files       []*SWUAttachment       `json:"files,omitempty"`
+	ESPAccount  string                 `json:"esp_account,omitempty"`
+	VersionName string                 `json:"version_name,omitempty"`
 }
 
 type SWURecipient struct {
