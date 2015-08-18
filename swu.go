@@ -213,7 +213,7 @@ func (c *SWUClient) ResendLog(id string) (*SWULogResend, error) {
 	return parse, err
 }
 
-func (c *SWUClient) makeRequest(method, endpoint string, body io.Reader, result interface{}) error {
+func (c *SWUClient) MakeRequest(method, endpoint string, body io.Reader, result interface{}) error {
 	r, _ := http.NewRequest(method, c.URL+endpoint, body)
 	r.SetBasicAuth(c.apiKey, "")
 	r.Header.Set("X-SWU-API-CLIENT", APIHeaderClient)
